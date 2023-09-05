@@ -1,7 +1,8 @@
 import React from "react";
+import PageHeading from "./PageHeading";
 
 const Testimonial = () => {
-  return <div>Testimonial</div>;
+  return <><PageHeading heading="Testimonial"/></>;
 };
 
 export default Testimonial;

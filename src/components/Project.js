@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const Project = ({ projects }) => {
+const Project = ({ projects, mode }) => {
   const [visibleProjects, setvisibleProjects] = useState(2);
 
   const showMoreProjects = () => {
@@ -20,6 +20,9 @@ const Project = ({ projects }) => {
     );
   };
 
+  // Define text color based on the mode
+  const textColor = mode === "dark" ? "white" : "black";
+
   return (
     <>
       <div className="container">
@@ -28,7 +31,7 @@ const Project = ({ projects }) => {
             <div
               className="card mb-4"
               key={index}
-              style={{ maxWidth: "1000px" }}
+              style={{ maxWidth: "1000px", color: textColor }}
             >
               <div className="row g-0">
                 <div className="col-md-4">
@@ -63,6 +66,7 @@ const Project = ({ projects }) => {
           <button
             onClick={showMoreProjects}
             className="btn hireMeBtn d-flex my-4 m-auto"
+            style={{ color: textColor }}
           >
             Show More
           </button>

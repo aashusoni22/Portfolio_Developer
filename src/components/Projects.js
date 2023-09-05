@@ -2,7 +2,7 @@ import React from "react";
 import Project from "./Project";
 import PageHeading from "./PageHeading";
 
-const Projects = () => {
+const Projects = ({mode}) => {
   const projects = [
     {
       title: "Project 1",
@@ -89,7 +89,7 @@ const Projects = () => {
   return (
     <>
       <PageHeading heading="Projects" />
-      <Project projects={projects} />
+      <Project mode={mode} projects={projects} />
     </>
   );
 };

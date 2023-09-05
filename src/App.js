@@ -9,23 +9,27 @@ import Testimonial from "./components/Testimonial";
 import { useState } from "react";
 
 function App() {
-  const [mode, setMode] = useState({});
+  const [mode, setMode] = useState("light");
 
   const toggleMode = () => {
-    if (mode === "light") {
-      setMode("dark");
+    if (mode === 'light') {
+      setMode('dark');
+      document.body.style.backgroundColor = 'black';
+      document.body.style.color = 'white'
     } else {
-      setMode("light");
+      setMode('light');
+      document.body.style.backgroundColor = 'white';
+      document.body.style.color = 'black'
     }
-  };
+  }
 
   return (
     <Router>
-      <Navbar toggleMode={toggleMode} />
+      <Navbar mode={mode} toggleMode={toggleMode} />
       <Routes>
-        <Route exact path="/" element={<Home />}></Route>
+        <Route exact path="/" element={<Home mode={mode} toggleMode={toggleMode} />}></Route>
         <Route exact path="/about" element={<About />}></Route>
-        <Route exact path="/projects" element={<Projects />}></Route>
+        <Route exact path="/projects" element={<Projects mode={mode} toggleMode={toggleMode}/>}></Route>
         <Route exact path="/testimonial" element={<Testimonial />}></Route>
         <Route exact path="/contact" element={<Contact />}></Route>
       </Routes>

@@ -2,13 +2,16 @@ import React from "react";
 import devHome from "./dev-home.png";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
 
-const Home = () => {
+const Home = ({mode}) => {
   const [text] = useTypewriter({
     words: ["Web Developer", "Freelancer", "UX/UI Desginer"],
     loop: {},
     typeSpeed: 80,
     deleteSpeed: 50,
   });
+
+  const textColor = mode === "dark" ? "white" : "black";
+  
   return (
     <>
       <div className="d-flex">
@@ -28,7 +31,7 @@ const Home = () => {
           <i className="fa-brands fa-linkedin"></i>
           <i className="fa-brands fa-youtube"></i>
           <div className="hireMe">
-            <button className="btn hireMeBtn">Hire Me</button>
+            <button className="btn hireMeBtn" style={{color: textColor}}>Hire Me</button>
             <button className="btn cvBtn mx-3">Download CV</button>
           </div>
         </div>

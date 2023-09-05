@@ -2,10 +2,13 @@ import React from "react";
 import { Link } from "react-router-dom";
 import coding from "./coding.png";
 
-const Navbar = () => {
+const Navbar = (props) => {
+
+  const textcolor = props.mode === "light" ? "black": "white";
+ 
   return (
     <>
-      <nav className="navbar navbar-expand-lg p-2 bgsticky-top">
+      <nav className= {`navbar navbar-expand-lg p-2 sticky-top`}>
         <div className="container-fluid">
           <a href="/" className="img-fluid">
             <img
@@ -56,22 +59,22 @@ const Navbar = () => {
           </div>
         </div>
         <div className="d-flex">
+       <i onClick={props.toggleMode}
+            className="fa-solid fa-moon fs-4 m-auto"
+            style={{ color: textcolor }}
+          ></i>
           <i
             className="fa-brands fa-github fs-4 m-auto"
             style={{ color: "white" }}
           ></i>
           <i
             className="fa-brands fa-linkedin fs-4 m-auto"
-            style={{ color: "white" }}
+            style={{ color: "white"}}
           ></i>
           <i
             className="fa-brands fa-youtube fs-4 m-auto"
             style={{ color: "white" }}
-          ></i>
-          <i
-            className="fa-solid fa-moon fs-4 m-auto"
-            style={{ color: "rgb(12,12,12)" }}
-          ></i>
+          ></i> 
         </div>
       </nav>
     </>
