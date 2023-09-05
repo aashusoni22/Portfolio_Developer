@@ -5,13 +5,13 @@ import coding from "./coding.png";
 const Navbar = () => {
   return (
     <>
-      <nav className="navbar navbar-expand-lg sticky-top">
+      <nav className="navbar navbar-expand-lg p-2 bgsticky-top">
         <div className="container-fluid">
           <a href="/" className="img-fluid">
             <img
               src={coding}
               alt="..."
-              style={{ width: "45px", marginLeft: "15px" }}
+              style={{ width: "40px", marginLeft: "80px" }}
             />
           </a>
           <button
@@ -56,9 +56,22 @@ const Navbar = () => {
           </div>
         </div>
         <div className="d-flex">
-          <i class="fa-brands fa-github fs-4 m-auto"></i>
-          <i class="fa-brands fa-linkedin fs-4 m-auto"></i>
-          <i class="fa-brands fa-youtube fs-4 m-auto"></i>
+          <i
+            className="fa-brands fa-github fs-4 m-auto"
+            style={{ color: "white" }}
+          ></i>
+          <i
+            className="fa-brands fa-linkedin fs-4 m-auto"
+            style={{ color: "white" }}
+          ></i>
+          <i
+            className="fa-brands fa-youtube fs-4 m-auto"
+            style={{ color: "white" }}
+          ></i>
+          <i
+            className="fa-solid fa-moon fs-4 m-auto"
+            style={{ color: "rgb(12,12,12)" }}
+          ></i>
         </div>
       </nav>
     </>

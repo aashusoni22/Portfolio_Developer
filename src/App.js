@@ -6,11 +6,22 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import Testimonial from "./components/Testimonial";
+import { useState } from "react";
 
 function App() {
+  const [mode, setMode] = useState({});
+
+  const toggleMode = () => {
+    if (mode === "light") {
+      setMode("dark");
+    } else {
+      setMode("light");
+    }
+  };
+
   return (
     <Router>
-      <Navbar />
+      <Navbar toggleMode={toggleMode} />
       <Routes>
         <Route exact path="/" element={<Home />}></Route>
         <Route exact path="/about" element={<About />}></Route>

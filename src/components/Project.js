@@ -1,10 +1,23 @@
 import React, { useState } from "react";
 
 const Project = ({ projects }) => {
-  const [visibleProjects, setvisibleProjects] = useState(4);
+  const [visibleProjects, setvisibleProjects] = useState(2);
 
   const showMoreProjects = () => {
-    setvisibleProjects(visibleProjects + 4);
+    setvisibleProjects(visibleProjects + 2);
+  };
+
+  const renderDescriptionPoints = (description) => {
+    // Split the description into points based on newline characters
+    const points = description.split(".");
+
+    return (
+      <ul>
+        {points.map((point, pointIndex) => (
+          <li key={pointIndex}>{point}</li>
+        ))}
+      </ul>
+    );
   };
 
   return (
@@ -15,7 +28,7 @@ const Project = ({ projects }) => {
             <div
               className="card mb-4"
               key={index}
-              style={{ maxWidth: "700px" }}
+              style={{ maxWidth: "1000px" }}
             >
               <div className="row g-0">
                 <div className="col-md-4">
@@ -26,9 +39,9 @@ const Project = ({ projects }) => {
                   />
                 </div>
                 <div className="col-md-8">
-                  <div className="card-body">
-                    <h5 className="card-title">{project.title}</h5>
-                    <p className="card-text">{project.description}</p>
+                  <div className="card-body p-4" style={{ height: "400px" }}>
+                    <h5 className="card-title my-4">{project.title}</h5>
+                    {renderDescriptionPoints(project.description)}
                     <div className="mb-3">
                       {project.tags.map((tag, tagIndex) => (
                         <span

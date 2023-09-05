@@ -24,9 +24,9 @@ const Home = () => {
             </span>
             <Cursor />
           </p>
-          <i class="fa-brands fa-github"></i>
-          <i class="fa-brands fa-linkedin"></i>
-          <i class="fa-brands fa-youtube"></i>
+          <i className="fa-brands fa-github"></i>
+          <i className="fa-brands fa-linkedin"></i>
+          <i className="fa-brands fa-youtube"></i>
           <div className="hireMe">
             <button className="btn hireMeBtn">Hire Me</button>
             <button className="btn cvBtn mx-3">Download CV</button>
