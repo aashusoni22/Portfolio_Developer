@@ -32,12 +32,12 @@ body {
 
 .image-container {
   margin-left: 300px;
-  margin-top: 100px;
+  margin-top: 160px;
 }
 
 .devHomeImg {
   border-radius: 200px;
-  width: 550px;
+  width: 580px;
 }
 
 .devHomeImg:hover {
@@ -46,8 +46,8 @@ body {
 }
 
 .intro {
-  margin-left: 240px;
-  margin-top: 220px;
+  margin-left: 220px;
+  margin-top: 280px;
   font-size: 45px;
 }
 

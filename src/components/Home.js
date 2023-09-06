@@ -32,7 +32,13 @@ const Home = ({mode}) => {
           <i className="fa-brands fa-youtube"></i>
           <div className="hireMe">
             <button className="btn hireMeBtn" style={{color: textColor}}>Hire Me</button>
+             <a
+              href="/resume.pdf"
+              download="YourResume.pdf"
+              style={{textDecoration: "none"}}
+            >
             <button className="btn cvBtn mx-3">Download CV</button>
+            </a>
           </div>
         </div>
       </div>
