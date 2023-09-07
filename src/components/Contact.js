@@ -1,8 +1,10 @@
 import React from "react";
 import PageHeading from "./PageHeading";
-import contactHi from "./contactHi.png"
+import contactHi from "./contactHi.png";
 
 const Contact = (props) => {
+  const bgColor = props.mode === "dark" ? "black" : "white";
+  const textColor = props.mode === "dark" ? "white" : "black";
   return (
     <div>
       <PageHeading heading="Contact Me" />
@@ -12,19 +14,34 @@ const Contact = (props) => {
             <label for="inputFirstName" className="form-label">
               First Name
             </label>
-            <input type="text" className="form-control" id="inputFirstName" />
+            <input
+              type="text"
+              className="form-control"
+              id="inputFirstName"
+              style={{ background: bgColor, color: textColor }}
+            />
           </div>
           <div className="col-md-6">
             <label for="inputLastName" className="form-label">
               Last Name
             </label>
-            <input type="text" className="form-control" id="inputLastName" />
+            <input
+              type="text"
+              className="form-control"
+              id="inputLastName"
+              style={{ background: bgColor, color: textColor }}
+            />
           </div>
           <div className="col-6">
             <label for="inputEmail" className="form-label">
               Email Address
             </label>
-            <input type="email" className="form-control" id="inputEmail" />
+            <input
+              type="email"
+              className="form-control"
+              id="inputEmail"
+              style={{ background: bgColor, color: textColor }}
+            />
           </div>
           <div className="col-md-6">
             <label for="inputMobile" className="form-label">
@@ -35,6 +52,7 @@ const Contact = (props) => {
               className="form-control"
               id="inputMobile"
               placeholder="+1"
+              style={{ background: bgColor, color: textColor }}
             />
           </div>
           <div className="form-group">
@@ -43,19 +61,29 @@ const Contact = (props) => {
               className="form-control"
               id="exampleFormControlTextarea1"
               rows="4"
+              style={{
+                background: bgColor,
+                color: textColor,
+                placeholder: textColor,
+              }}
             ></textarea>
           </div>
           <div className="col-12">
             <button
               type="submit"
-              className="btn my-3"
-              style={{ background: "blueviolet", color: "white" }}
+              className="btn mt-3"
+              style={{ background: "rgb(98, 70, 223)", color: "white" }}
             >
               Submit
             </button>
           </div>
         </form>
-        <img className="image-fluid m-auto d-flex" src={contactHi} alt=".." style={{width: "31%"}}/>
+        <img
+          className="image-fluid m-auto d-flex"
+          src={contactHi}
+          alt=".."
+          style={{ width: "29%" }}
+        />
       </div>
     </div>
   );

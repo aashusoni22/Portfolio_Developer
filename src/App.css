@@ -4,8 +4,8 @@ body {
 }
 
 .navbar {
-  background: rgb(118, 18, 211);
-  font-size: 16px;
+  background: rgb(98, 70, 223);
+  font-size: 17px;
 }
 
 .nav-lnk {
@@ -13,12 +13,12 @@ body {
   text-decoration: none;
 }
 
-.nav-lnk:hover{
-  color: rgb(188, 124, 248)
+.nav-lnk:hover {
+  color: rgb(98, 70, 223);
 }
 
 .active-link {
-  color: rgb(188, 124, 248)
+  color: rgb(172, 154, 255);
 }
 
 .nav-item {
@@ -30,19 +30,24 @@ body {
 }
 
 .nav-item > a:hover {
-  color: rgb(11, 1, 20);
+  color: rgb(172, 154, 255);
 }
 
-.navSocial a{
+.navSocial a {
   padding: 10px;
 }
 
-.fa-moon {
-  padding-right: 12px;
+.navSocial a:hover {
+  color: rgb(0, 0, 0);
 }
+
+.fa-moon {
+  padding-right: 35px;
+}
+
 .image-container {
   margin-left: 300px;
-  margin-top: 160px;
+  margin-top: 120px;
 }
 
 .devHomeImg {
@@ -50,25 +55,22 @@ body {
   width: 580px;
 }
 
-.devHomeImg:hover {
-  width: 600px;
-  transition: 0.8s all ease;
-}
-
 .intro {
   margin-left: 220px;
-  margin-top: 280px;
+  margin-top: 250px;
   font-size: 45px;
+  font-weight: bold;
 }
 
 .intro1 {
   font-size: 35px;
 }
 
-.fa-brands{
+.fa-brands {
   margin-right: 25px;
 }
 
+<<<<<<< HEAD
 .fa-github{
   color: #171515;
 }
@@ -82,38 +84,43 @@ body {
 }
 
 
+=======
+.fa-brands:hover {
+  color: rgb(98, 70, 223);
+}
+
+>>>>>>> 7c1c00f11452b7131d48be3224229caabcd7b9a4
 i {
   font-size: 35px;
   margin-bottom: 30px;
   cursor: pointer;
-  color: black;
 }
 
 i:hover {
-  color: rgb(118, 18, 211);
+  color: rgb(98, 70, 223);
   transition: 0.2s all ease;
 }
 
 .hireMeBtn {
   background: transparent;
-  border: 2px solid rgb(118, 18, 211);
+  border: 2px solid rgb(98, 70, 223);
 }
 
 .hireMeBtn:hover {
-  border: 2px solid rgb(118, 18, 211);
-  background-color: rgb(118, 18, 211);
+  border: 2px solid rgb(98, 70, 223);
+  background-color: rgb(98, 70, 223);
   color: white;
 }
 
 .cvBtn {
-  border: 2px solid rgb(118, 18, 211);
-  background-color: rgb(118, 18, 211);
+  border: 2px solid rgb(98, 70, 223);
+  background-color: rgb(98, 70, 223);
   color: white;
 }
 
 .cvBtn:hover {
   background-color: transparent;
-  border: 2px solid rgb(118, 18, 211);
+  border: 2px solid rgb(98, 70, 223);
 }
 
 .img-fluid {
@@ -124,7 +131,7 @@ i:hover {
 
 .card {
   background: transparent;
-  border: 1px solid rgb(47, 0, 92);
+  border: 1px solid rgb(98, 70, 223);
   display: inline-flex;
   margin: 20px;
   /* scroll-behavior: smooth; */

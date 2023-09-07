@@ -3,8 +3,7 @@ import { Link } from "react-router-dom";
 import coding from "./coding.png";
 
 const Navbar = (props) => {
-
-  const textcolor = props.mode === "light" ? "black": "white";
+  const textcolor = props.mode === "light" ? "black" : "white";
 
   const [activeLink, setActiveLink] = useState(""); // Initialize active link state
 
@@ -15,13 +14,13 @@ const Navbar = (props) => {
 
   return (
     <>
-      <nav className= {`navbar navbar-expand-lg p-3 sticky-top`}>
+      <nav className={`navbar navbar-expand-lg p-3 sticky-top`}>
         <div className="container-fluid">
           <a href="/" className="img-fluid">
             <img
               src={coding}
               alt="..."
-              style={{ width: "40px", marginLeft: "80px" }}
+              style={{ width: "45px", marginLeft: "80px" }}
             />
           </a>
           <button
@@ -35,35 +34,65 @@ const Navbar = (props) => {
           >
             <span className="navbar-toggler-icon"></span>
           </button>
-          <div className="collapse navbar-collapse" id="navbarSupportedContent">
+          <div
+            className="collapse navbar-collapse"
+            id="navbarSupportedContent"
+            style={{ maxWidth: "89%" }}
+          >
             <ul className="navbar-nav">
               <li className="nav-item">
-                <Link to="/" className={activeLink === "home" ? "active-link" : "nav-lnk"}
-            onClick={() => handleLinkClick("home")} style={{textDecoration:"none"}} >
+                <Link
+                  to="/"
+                  className={activeLink === "home" ? "active-link" : "nav-lnk"}
+                  onClick={() => handleLinkClick("home")}
+                  style={{ textDecoration: "none" }}
+                >
                   Home
                 </Link>
               </li>
               <li className="nav-item">
-                <Link  to="/about" className={activeLink === "about" ? "active-link" : "nav-lnk"}
-            onClick={() => handleLinkClick("about")} style={{textDecoration:"none"}}>
+                <Link
+                  to="/about"
+                  className={activeLink === "about" ? "active-link" : "nav-lnk"}
+                  onClick={() => handleLinkClick("about")}
+                  style={{ textDecoration: "none" }}
+                >
                   About
                 </Link>
               </li>
               <li className="nav-item">
-                <Link to="/projects" className={activeLink === "projects" ? "active-link" : "nav-lnk"}
-            onClick={() => handleLinkClick("projects")} style={{textDecoration:"none"}}>
+                <Link
+                  to="/projects"
+                  className={
+                    activeLink === "projects" ? "active-link" : "nav-lnk"
+                  }
+                  onClick={() => handleLinkClick("projects")}
+                  style={{ textDecoration: "none" }}
+                >
                   Projects
                 </Link>
               </li>
               <li className="nav-item">
-                <Link to="/testimonial" className={activeLink === "testimonial" ? "active-link" : "nav-lnk"}
-            onClick={() => handleLinkClick("testimonial")} style={{textDecoration:"none"}}>
+                <Link
+                  to="/testimonial"
+                  className={
+                    activeLink === "testimonial" ? "active-link" : "nav-lnk"
+                  }
+                  onClick={() => handleLinkClick("testimonial")}
+                  style={{ textDecoration: "none" }}
+                >
                   Testimonial
                 </Link>
               </li>
               <li className="nav-item">
-                <Link  to="/contact" className={activeLink === "contact" ? "active-link" : "nav-lnk"}
-            onClick={() => handleLinkClick("contact")} style={{textDecoration:"none"}}>
+                <Link
+                  to="/contact"
+                  className={
+                    activeLink === "contact" ? "active-link" : "nav-lnk"
+                  }
+                  onClick={() => handleLinkClick("contact")}
+                  style={{ textDecoration: "none" }}
+                >
                   Contact
                 </Link>
               </li>
@@ -71,22 +100,29 @@ const Navbar = (props) => {
           </div>
         </div>
         <div className="d-flex navSocial">
-       <i onClick={props.toggleMode}
+          <i
+            onClick={props.toggleMode}
             className="fa-solid fa-moon fs-4 m-auto"
             style={{ color: textcolor }}
           ></i>
-          <a href="https://github.com/" target="_blank" rel="noreferrer"><i
-            className="fa-brands fa-github fs-4 m-auto"
-            style={{ color: "white" }}
-          ></i></a>
-           <a href="https://linkedin.com/" target="_blank" rel="noreferrer"><i
-            className="fa-brands fa-linkedin fs-4 m-auto"
-            style={{ color: "white"}}
-          ></i></a>
-           <a href="https://youtube.com/" target="_blank" rel="noreferrer"><i
-            className="fa-brands fa-youtube fs-4 m-auto"
-            style={{ color: "white" }}
-          ></i></a>
+          <a href="https://github.com/" target="_blank" rel="noreferrer">
+            <i
+              className="fa-brands fa-github fs-4 m-auto"
+              style={{ color: "white" }}
+            ></i>
+          </a>
+          <a href="https://linkedin.com/" target="_blank" rel="noreferrer">
+            <i
+              className="fa-brands fa-linkedin fs-4 m-auto"
+              style={{ color: "white" }}
+            ></i>
+          </a>
+          <a href="https://youtube.com/" target="_blank" rel="noreferrer">
+            <i
+              className="fa-brands fa-youtube fs-4 m-auto"
+              style={{ color: "white" }}
+            ></i>
+          </a>
         </div>
       </nav>
     </>
