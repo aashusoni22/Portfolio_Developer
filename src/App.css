@@ -69,6 +69,19 @@ body {
   margin-right: 25px;
 }
 
+.fa-github{
+  color: #171515;
+}
+
+.fa-linkedin{
+  color: rgb(0, 119, 181);
+}
+
+.fa-youtube{
+  color: rgb(255, 0, 0);
+}
+
+
 i {
   font-size: 35px;
   margin-bottom: 30px;
