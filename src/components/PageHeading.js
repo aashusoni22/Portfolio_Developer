@@ -5,7 +5,7 @@ const PageHeading = (props) => {
     <div>
       <h2
         className="text-center my-5"
-        style={{ color: "rgb(118, 18, 211)", fontWeight: "bold" }}
+        style={{ color: "rgb(98, 70, 223)", fontWeight: "bold" }}
       >
         {props.heading}
       </h2>

@@ -14,7 +14,9 @@ const Project = ({ projects, mode }) => {
     return (
       <ul>
         {points.map((point, pointIndex) => (
-          <li key={pointIndex}>{point}</li>
+          <li className="my-2" key={pointIndex}>
+            {point}
+          </li>
         ))}
       </ul>
     );
@@ -49,7 +51,7 @@ const Project = ({ projects, mode }) => {
                       {project.tags.map((tag, tagIndex) => (
                         <span
                           className="badge mx-1"
-                          style={{ backgroundColor: "blueviolet" }}
+                          style={{ backgroundColor: "rgb(98, 70, 223)" }}
                           key={tagIndex}
                         >
                           {tag}
