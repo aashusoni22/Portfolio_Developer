@@ -27,9 +27,9 @@ const Home = ({mode}) => {
             </span>
             <Cursor />
           </p>
-          <i className="fa-brands fa-github"></i>
-          <i className="fa-brands fa-linkedin"></i>
-          <i className="fa-brands fa-youtube"></i>
+          <a href="https://github.com/" target="_blank" rel="noreferrer"><i className="fa-brands fa-github"></i></a>
+          <a href="https://linkedin.com/" target="_blank" rel="noreferrer"><i className="fa-brands fa-linkedin"></i></a>
+          <a href="https://youtube.com/" target="_blank" rel="noreferrer"><i className="fa-brands fa-youtube"></i></a>
           <div className="hireMe">
             <button className="btn hireMeBtn" style={{color: textColor}}>Hire Me</button>
              <a

@@ -1,14 +1,15 @@
 import React from "react";
 import PageHeading from "./PageHeading";
+import contactHi from "./contactHi.png"
 
 const About = () => {
   return (
     <>
       <PageHeading heading="About Me" />
       <img
-        src="https://img.freepik.com/premium-vector/man-telling-lies_485157-195.jpg"
-        className="img-fluid d-flex m-auto rounded"
-        style={{ width: "300px" }}
+        src={contactHi}
+        className="img-fluid d-flex m-auto rounded my-5"
+        style={{ width: "220px" }}
         alt="..."
       />
       <div className="container">
@@ -24,7 +25,7 @@ const About = () => {
             >
               DESIGNER & DEVELOPER
             </p>
-            <div className="p-3 m-auto">
+            <div className="p-3 m-auto" style={{textAlign: "justify"}}>
               Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
               nonummy nibh euismod tincidunt ut laoreet. Dolore magna aliquam
               erat volutpat Dolore magna aliquam erat volutpat. Lorem ipsum
@@ -43,7 +44,7 @@ const About = () => {
                 fontWeight: "bold",
               }}
             >
-              Skills
+              SKILLS
             </p>
             <div className="progress my-4 m-auto" style={{ height: "25px" }}>
               <div
